@@ -1,0 +1,41 @@
+PhotoApiBundle\Entity\FileTag:
+    type: entity
+    table: file_tag
+    indexes:
+        file_tag_file_id_fk:
+            columns:
+                - file_id
+        file_tag_tag_id_fk:
+            columns:
+                - tag_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        file:
+            targetEntity: File
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                file_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        tag:
+            targetEntity: Tag
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                tag_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

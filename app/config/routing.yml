@@ -1,0 +1,29 @@
+photo_api:
+    resource: "@PhotoApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+#files api routes
+file_list:
+    path:      /file/list/{page}/{itemsPerPage}
+    defaults:  { _controller: PhotoApiBundle:File:list}
+file_add:
+    path:      /file/add
+    defaults:  { _controller: PhotoApiBundle:File:add}
+file_remove:
+    path:      /file/remove/{fileId}
+    defaults:  { _controller: PhotoApiBundle:File:remove}
+
+#tags api routes
+tag_add:
+    path:      /tag/add/{fileId}
+    defaults:  { _controller: PhotoApiBundle:Tags:add}
+tag_remove:
+    path:      /tag/remove/{fileId}
+    defaults:  { _controller: PhotoApiBundle:Tags:remove}
+
+#handle non exists routes
+pageNotFound:
+    path:  /{path}
+    defaults: { _controller: PhotoApiBundle:PageNotFound:pageNotFound}
+

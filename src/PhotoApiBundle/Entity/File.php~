@@ -1,0 +1,103 @@
+<?php
+
+namespace PhotoApiBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * File
+ *
+ * @ORM\Table(name="file", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8C9F3610E86CEBE1", columns={"md5"})})
+ * @ORM\Entity
+ */
+class File
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="path", type="string", length=255, nullable=false)
+     */
+    private $path;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mime", type="string", length=50, nullable=false)
+     */
+    private $mime;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ext", type="string", length=5, nullable=false)
+     */
+    private $ext;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="md5", type="string", length=32, nullable=false)
+     */
+    private $md5;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="size", type="integer", nullable=false)
+     */
+    private $size;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adder", type="string", length=50, nullable=false)
+     */
+    private $adder;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="added", type="datetime", nullable=false)
+     */
+    private $added;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="modifier", type="string", length=50, nullable=false)
+     */
+    private $modifier;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime", nullable=false)
+     */
+    private $modified;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ghost", type="boolean", nullable=false)
+     */
+    private $ghost;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+

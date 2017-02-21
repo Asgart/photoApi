@@ -1,0 +1,68 @@
+<?php
+
+namespace PhotoApiBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tag
+ *
+ * @ORM\Table(name="tag", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_389B7835E237E06", columns={"name"})})
+ * @ORM\Entity
+ */
+class Tag
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adder", type="string", length=50, nullable=false)
+     */
+    private $adder;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="added", type="datetime", nullable=false)
+     */
+    private $added;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="modifier", type="string", length=50, nullable=false)
+     */
+    private $modifier;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="modified", type="datetime", nullable=false)
+     */
+    private $modified;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ghost", type="boolean", nullable=false)
+     */
+    private $ghost;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+

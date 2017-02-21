@@ -1,0 +1,45 @@
+PhotoApiBundle\Entity\Tag:
+    type: entity
+    table: tag
+    uniqueConstraints:
+        UNIQ_389B7835E237E06:
+            columns:
+                - name
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        adder:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        added:
+            type: datetime
+            nullable: false
+        modifier:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        modified:
+            type: datetime
+            nullable: false
+        ghost:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+Tag actions:
+  -Add tag:
+    apiUrl/tag/add/{fileId, integer}
+       params:
+         {'tags', array};
+  -Remove tag:
+    apiUrl/tag/remove/{fileId, integer}
+      params:
+        {'tags', array};
+
+File action:
+  -List files:
+    apiUrl/file/list/{page, integer}/{itemsPerPage, integer}
+  -Add file:
+    apiUrl/file/add
+      params:
+        {'photo', file}
+        {'tags, array'}
+        {'file_name', string}
+  -Remove file:
+    apiUrl/file/remove/{fileId, integer}

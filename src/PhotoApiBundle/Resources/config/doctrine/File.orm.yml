@@ -1,0 +1,74 @@
+PhotoApiBundle\Entity\File:
+    type: entity
+    table: file
+    uniqueConstraints:
+        UNIQ_8C9F3610E86CEBE1:
+            columns:
+                - md5
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        path:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        mime:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        ext:
+            type: string
+            nullable: false
+            length: 5
+            options:
+                fixed: false
+        md5:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+        size:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        adder:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        added:
+            type: datetime
+            nullable: false
+        modifier:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        modified:
+            type: datetime
+            nullable: false
+        ghost:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

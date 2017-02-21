@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PhotoApiBundle\Entity\Tag" table="tag">
+    <unique-constraints>
+      <unique-constraint name="UNIQ_389B7835E237E06" columns="name"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="adder" type="string" column="adder" length="50" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="added" type="datetime" column="added" nullable="false"/>
+    <field name="modifier" type="string" column="modifier" length="50" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="modified" type="datetime" column="modified" nullable="false"/>
+    <field name="ghost" type="boolean" column="ghost" nullable="false"/>
+  </entity>
+</doctrine-mapping>
