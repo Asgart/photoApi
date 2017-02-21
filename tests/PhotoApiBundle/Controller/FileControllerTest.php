@@ -23,7 +23,7 @@ class FileControllerTest extends WebTestCase
         );
         $this->assertContains('{"0":"test.jpeg","test.jpeg":["tag1","tag2","tag3"]}', $client->getResponse()->getContent());
 
-    }/*
+    }
     public function testAdd()
     {
         $testFileName = 'test';
@@ -64,5 +64,5 @@ class FileControllerTest extends WebTestCase
         );
         $this->assertContains('{"0":"test.jpeg","test.jpeg":["tag1","tag2","tag3"]}', $client->getResponse()->getContent());
 
-    }*/
+    }
 }
